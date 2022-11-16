@@ -37,5 +37,8 @@
 # Build directory
 build/
 
+# Documentation
+Documentation/
+
 #VS Code directory
 .vscode/
