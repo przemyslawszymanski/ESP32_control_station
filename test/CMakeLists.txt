@@ -13,8 +13,8 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(main_test main_test.cpp)
-target_link_libraries(main_test gtest_main gmock_main)
-add_test(NAME main_test COMMAND main_test)
+add_executable(main_test main_test.cpp DriverManager/DriverManagerUT.cpp)
+target_link_libraries(main_test gtest_main gmock_main driver_manager_test)
+add_test(NAME main_test COMMAND main_test )
 
 add_subdirectory(DriverManager)
